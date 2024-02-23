@@ -16,6 +16,7 @@ string
 
 // Solution
 
+```
 function dataTypeDetect(magicalBox) {
     return typeof magicalBox;
 }
@@ -27,6 +28,7 @@ console.log(result1); // Output: string
 // Example 2
 var result2 = dataTypeDetect("Hello, JavaScriptville!");
 console.log(result2); // Output: string
+```
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -42,6 +44,9 @@ Input:
 Output:
 5
 
+// Solution
+
+```
 function calculateSum(num1, num2) {
   // Add the two numbers to get their harmonious sum
   const sum = num1 + num2;
@@ -53,6 +58,7 @@ function calculateSum(num1, num2) {
 // Example usage:
 const result = calculateSum(2, 3);
 console.log(result); // Output: 5
+```
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -74,6 +80,9 @@ false
 Output:
 boolean
 
+// Solution
+
+```
 function detectTruthType(isTrue) {
   // Logging the data type to the console
   console.log(typeof isTrue);
@@ -82,5 +91,6 @@ function detectTruthType(isTrue) {
 // Example usage:
 detectTruthType(true);  // Output: boolean
 detectTruthType(false); // Output: boolean
+```
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
