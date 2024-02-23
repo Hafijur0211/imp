@@ -85,23 +85,26 @@ In JavaScript, alert, prompt, and confirm are three built-in functions that allo
 
 Example:-
 
-alert("Hello World");
+```alert("Hello World");```
 
 prompt: The prompt function displays a dialog box that allows the user to enter input. It takes two arguments: the message to be displayed as a prompt and an optional default value for the input field. The function returns the text entered by the user as a string or null if the user cancels the dialog.
 
 Example:-
-
+```
 const name = prompt("Please enter your name:", "John Doe");
 if (name !== null) {
   console.log("Hello, " + name + "!");
 }
+```
 
 confirm: The confirm function displays a dialog box with a message and two buttons: OK and Cancel. It is typically used to prompt the user for a yes-or-no decision. The function returns true if the user clicks OK and false if the user clicks Cancel.
 
 Example:
 
+```
 const result = confirm("Are you sure you want to delete this item?");
 console.log(result);
+```
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -141,21 +144,28 @@ JavaScript has six primitive data types: string, number, boolean, null, undefine
 
 Array: An Array is a collection of values or elements, which can be of any data type that is stored in a contiguous memory location and accessed using an index.
 
+```
 var names = [ “Mayank”, “Shubham”, “Amrita”]; // Array of strings
+```
 
+```
 var ages = [ 30, 29, 33 ] ; // Array of numbers
+```
 
 Objects: An object refers to a set of properties consisting of a key and a corresponding value. These values can include primitive data types, functions, or even other objects.
 
+```
 var student = {
   roll_no: 34,
   name: "Mayank",
   age: 27,
   city: "Delhi"
 };
+```
 
 Functions: A function is a block of code used to perform a specific task or action and can be reused in different parts of a program.
 
+```
 function sum(a, b) {
   return a + b
 }
@@ -163,6 +173,7 @@ function sum(a, b) {
 console.log(sum(3, 4)); // 7
 console.log(sum(5, 6)); //11
 
+```
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -180,12 +191,15 @@ Implicit Type Conversion is the automatic conversion of data types done by JavaS
 
 Example 1: Numeric string used with + gives string type
 
+```
 let numStr = "10";
 let result = numStr + 5;
 console.log(typeof result); // string
+```
 
 Example 2: Implicit Conversion to Number
 
+```
 let numStr = "10";
 let result1 = numStr - 5;
 let result2 = numStr / 2;
@@ -193,22 +207,27 @@ let result3 = numStr * 3;
 console.log(typeof result1); // number
 console.log(typeof result2); // number
 console.log(typeof result3); // number
+```
 
 Example 3: If a Boolean is used, true is 1, false is 0
 
+```
 let bool = true;
 let result = bool + 5;
 console.log(typeof result); // number
 console.log(result); // 6
+```
 
 Note that JavaScript considers 0 as false and all non-zero numbers as true. If true is converted to a number, then the result is always 1.
 
 Example 4: null is zero when used with the number
 
+```
 let nullVal = null;
 let result = nullVal + 5;
 console.log(typeof result); // number
 console.log(result); // 5
+```
 
 Explicit Conversion in JavaScript
 
@@ -219,31 +238,49 @@ Convert to Number Explicitly
 In JavaScript, you can utilize Number() to convert numeric strings and Boolean values into numbers.
 let result;
 
+```
 // string to number
+
 result = Number('324');
 console.log(result); // 324
 
 result = Number('324^(e-1)')
 console.log(result); // 32.4
+```
 
+```
 // boolean to number
+
 result = Number(true);
 console.log(result); // 1
 
 result = Number(false);
 console.log(result); // 0
+```
+
 NaN will be the result if a string is not a valid number. 
 let result;
+
+```
 result = Number('hello');
 console.log(result); // NaN
+```
 
+```
 result = Number(undefined);
 console.log(result); // NaN
+```
 
+```
 result = Number(NaN);
 console.log(result); // NaN
+```
+
 You can also generate numbers from strings using parseInt(), parseFloat(), unary operator +, and Math.floor().
+
+```
 let result;
+
 result = parseInt('20.01');
 console.log(result); // 20
 
@@ -255,17 +292,26 @@ console.log(result); // 20.01
 
 result = Math.floor('20.01');
 console.log(result); // 20
+```
+
 Convert to String Explicitly
+
 In JavaScript, you can convert non-string data types to strings using either String() or toString().
+
+```
 //number to string
+
 let result;
 result = String(325);
 console.log(result);  // "325"
 
 result = String(2 + 5);
 console.log(result); // "7"
+```
 
+```
 //other data types to string
+
 result = String(undefined);
 console.log(result); // "undefined"
 
@@ -277,19 +323,30 @@ console.log(result); // "true"
 
 result = String(NaN);
 console.log(result); // "NaN"
+```
 
+```
 //using toString()
+
 result = (324).toString();
 console.log(result); // "324"
 
 result = true.toString();
 console.log(result); // "true"
+```
 
+```
 result = String(false);
 console.log(result); // "false"
+```
+
 Note: String() takes null and undefined and converts them to string. However, toString() gives errors when null is passed.
+
 Convert to Boolean Explicitly
+
 You can use Boolean() to convert other data types to a Boolean in JavaScript. The conversion rules state that undefined, null, 0, NaN, and '' will convert to false.
+
+```
 let result;
 result = Boolean('');
 console.log(result); // false
@@ -305,7 +362,9 @@ console.log(result); // false
 
 result = Boolean(NaN);
 console.log(result); // false
+
 All other values give true.
+
 result = Boolean(324);
 console.log(result); // true
 
@@ -314,6 +373,7 @@ console.log(result); // true
 
 result = Boolean(' ');
 console.log(result); // true
+```
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
