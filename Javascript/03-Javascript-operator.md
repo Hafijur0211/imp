@@ -4,9 +4,11 @@ An operator is a special symbol that performs operations on operands (values and
 
 For example,
 
+```
 console.log(2 + 3); // 5
+```
 
-+ is what we call an operator that does the adding, and 2 and 3 are the numbers we're adding together.
+`+` is what we call an operator that does the adding, and 2 and 3 are the numbers we're adding together.
 
 Operators are used to performing various operations.
 
@@ -16,71 +18,75 @@ Operators can be used to assign values, compare values, and perform arithmetic o
 
 JavaScript Operator Types
 
-Assignment Operators
-Arithmetic Operators
-Comparison Operators
-Logical Operators
-Bitwise Operators
-String Operators
-Other JavaScript Operators
+- Assignment Operators
+- Arithmetic Operators
+- Comparison Operators
+- Logical Operators
+- Bitwise Operators
+- String Operators
+- Other JavaScript Operators
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Assignment Operators
+
 Values can be assigned to variables by making use of assignment operators. For example,
 const x = 5;
+
 To assign value 5 to variable x, you can use the = operator.
 
 Below is a list of commonly used assignment operators:
 
+```
 Operator
-=
+`=`
 Name
-Assignment operator
+Assignment operator.
 Example
 a = 7;        // 7
 
 Operator
-+=
+`+=`
 Name
 Addition assignment
 Example
 a += 5;     // a = a + 5
 
 Operator
--=
+`-=`
 Name
 Subtraction Assignment
 Example
 a -= 2;      // a = a - 2
 
 Operator
-*=
+`*=`
 Name
 Multiplication Assignment
 Example
 a *= 3;      // a = a * 3
 
 Operator
-/=
+`/=`
 Name
 Division Assignment
 Example
 a /= 2;      // a = a / 2
 
 Operator
-%=
+`%=`
 Name
 Remainder Assignment
 Example
 a %= 2;    // a = a % 2
 
 Operator
-**=
+`**=`
 Name
 Exponentiation Assignment
 Example
 a **= 2;    // a = square of a
+```
 
 Important: The most commonly used assignment operator is =. You will easily understand other assignment operators, such as +=, -=, and *=, once you study arithmetic operators in JavaScript.
 
@@ -90,13 +96,15 @@ Arithmetic Operators
 
 Operators used for performing arithmetic calculations are known as Arithmetic Operators, which include the following:
 
+```
 const number = 3 + 5; // 8
+```
 
 When using the + operator in your code, you're basically adding two values together.
 
 Below is a list of commonly used arithmetic operators:
 
-
+```
 Operator
 +
 Name
@@ -152,10 +160,13 @@ Name
 Exponentiation (Power)
 Example
 a ** b
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Example: Arithmetic operators in JavaScript
+
+```
 let num1 = 5;
 let num2 = 3;
 
@@ -187,7 +198,12 @@ console.log('num1 = ', num1);     // 5
 //exponentiation
 console.log('num1 ** num2 =', num1 ** num2);
 Increment(++) and Decrement(--) Operator
+
+```
+
 In JavaScript, the increment operator ++ adds 1 to a variable's value, while the decrement operator -- subtracts 1 from a variable's value.
+
+```
 let num = 5
 
 console.log(++num);          // num becomes 6 and prints 6
@@ -197,12 +213,20 @@ console.log(--num);          // num becomes 6 and prints 6
 console.log(num--);          // Prints 6 and num becomes 5
 console.log(num);            // Prints 5
 
+```
+
 Explanation
+
+
 let num = 5; - Initializes the variable num with the value 5.
+
 console.log(++num); - Pre-increment: The value of num is incremented by 1 first, making num equal to 6, and then the new value is printed. Output: 6.
+
 console.log(num++); - Post-increment: The original value of num (which is now 6) is printed first, and then the value of num is incremented by 1, making num equal to 7. Output: 6.
+
 console.log(num); - The current value of num is printed. Since num was incremented to 7 in the previous step, the output is 7.
 console.log(--num); - Pre-decrement: The value of num is decremented by 1 first, making num equal to 6, and then the new value is printed. Output: 6.
+
 console.log(num--); - Post-decrement: The original value of num (which is now 6) is printed first, and then the value of num is decremented by 1, making num equal to 5. Output: 6.
 console.log(num); - The current value of num is printed. Since num was decremented to 5 in the previous step, the output is 5.
 
@@ -212,13 +236,17 @@ Comparison Operators
 
 Comparison operators are used to comparing 2 values and then return a Boolean value, either true or false. For example,
 
+```
 const a = 3, b = 2;
 
 console.log(a > b); // true
+```
 
 When using the comparison operator >, we confidently compare whether a is greater than b.
 
 Below is a list of commonly used comparison operators:
+
+```
 
 Operator
 ==
@@ -275,8 +303,11 @@ Description
 Less than or equal to
 Example
 7 <= 5 returns false
+```
 
 Example: Comparison operators in JavaScript
+
+```
 // equal operator
 console.log(2 == 2); // true
 console.log(2 == '2'); // true
@@ -292,6 +323,7 @@ console.log(2 === '2'); // false
 // strict not equal operator
 console.log(2 !== '2'); // true
 console.log(2 !== 2); // false
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -302,13 +334,16 @@ Logical operators are used for performing logical operations and return either t
 
 Example: Logical operators in JavaScript
 
+```
 const x = 5, y = 3;
 (x < 6) && (y < 5); // true
+```
 
 The logical operator && is utilized in this code. With both x < 6 and y < 5 being true, the result of the operation is confidently true.
 
 Below is a list of commonly used Logical operators:
 
+```
 Operators
 &&
 Description
@@ -340,7 +375,7 @@ console.log(true || false); // true
 
 // logical NOT
 console.log(!true); // false
-
+```
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Bitwise Operators
@@ -349,6 +384,7 @@ Bitwise operators are employed to carry out operations on binary representations
 
 Below is a list of commonly used Bitwise operators:
 
+```
 Operators
 &
 Description
@@ -420,7 +456,7 @@ console.log(a << 1); // 10 (1010 in binary)
 
 // Right shift
 console.log(a >> 1); // 2 (0010 in binary)
-
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -430,10 +466,12 @@ In JavaScript, + operator is used to concatenate (join) two or more strings.
 
 Example: String Operators in JavaScript
 
+```
 let str1 = "Hello";
 let str2 = "world!";
 let result = str1 + " " + str2; // concatenation using the + operator
 console.log(result);            // Output: "Hello world!"
+```
 
 It's important to note that the + operator performs concatenation when used with strings but performs addition when used with numbers.
 
@@ -441,6 +479,7 @@ Other JavaScript Operators
 
 Below is a list of additional operators that are available in JavaScript.
  
+```
 Operators
 (condition) ? (if_true) : (else_false);
 Description
@@ -478,6 +517,7 @@ Example
 
 Operators
 instanceof
+```
 Description
 Checks if an object is an instance of a particular class or constructor function
 Example
@@ -488,11 +528,18 @@ x instanceof MyClass
 
 
 Example: Ternary Operator
+
+```
 let age = 18;
 let canVote = age >= 18 ? "Yes" : "No";
 console.log(canVote); // Output: Yes
+```
+
 In this example, we check if the age variable is greater than or equal to 18. If the statement's condition is true, the ternary operator returns "Yes"; otherwise, it returns "No". The result is then stored in the canVote variable.
+
 The same logic can be written using an if-else statement:
+
+```
 let age = 18;
 let canVote;
 
@@ -503,7 +550,10 @@ if (age >= 18) {
 }
 
 console.log(canVote); // Output: Yes
+```
 Example: typeof Operator
+
+```
 const num = 42;
 const str = "Hello, World!";
 const bool = true;
@@ -521,12 +571,16 @@ console.log(typeof arr);  // Output: "object" (arrays are objects in JavaScript)
 console.log(typeof func); // Output: "function"
 console.log(typeof und);  // Output: "undefined"
 console.log(typeof nul);  // Output: "object" (this is considered a historical bug in JavaScript)
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Activity: Code Practice
+
 Open any JavaScript IDE or VS Code IDE.
+
 Enter the following code:
+```
 let a=10;
 
 console.log(a++ + ++a)
@@ -560,6 +614,7 @@ false
 "Pass"
 
 "Pass"
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
