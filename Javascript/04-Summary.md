@@ -106,10 +106,12 @@ The confirm function in JavaScript displays a dialog box with a message and two 
 The confirm function returns true if the user clicks the OK button, indicating that the user has confirmed the action. It returns false if the user clicks the Cancel button, indicating that the user has canceled the action.
 An example of how the confirm function can be used is to ask the user for confirmation before deleting an item.
 For instance:
+```
 const result = confirm("Are you sure you want to delete this item?");
 if (result) {
   // Delete the item
 }
+```
 In this example, the confirm function displays a confirmation dialog asking if the user wants to delete an item. If the user clicks OK (confirming the action), the code inside the if block executes and deletes the item. If the user clicks Cancel (canceling the action), the code inside the if block is not executed, and the item is not deleted.
 
 
