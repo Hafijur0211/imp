@@ -1,12 +1,16 @@
 JavaScript Loops & Control Statements
 
 For loop
+
 A for-loop is a control flow statement that allows you to execute a block of code repeatedly. It's typically used when you need to perform a specific task a certain number of times or when you need to iterate over an array or object. 
 
 The basic syntax for a for-loop in JavaScript is as follows:
+
+```
 for (initialization; condition; increment/decrement) {
   // code to be executed
 }
+```
 
 Let's break down each part of the syntax:
 
@@ -19,17 +23,22 @@ Increment/decrement: This is where you update the counter variable at the end of
 Code to be executed: This is the block of code that will be executed each time the loop iterates. This can be any valid JavaScript code, including other control flow statements, function calls, or variable assignments.
 
 Here's an example of a for-loop that iterates over an array of numbers and logs each one to the console:
+
+```
 const numbers = [1, 2, 3, 4, 5];
 
 for (let i = 0; i < numbers.length; i++) {
   console.log(numbers[i]);
 }
+```
 
 Explanation
 
 In this example, the loop initializes a variable called i to a value of 0, sets the condition to i < numbers.length (which is true as long as i is less than the number of elements in the numbers array), and increments i by 1 at the end of each iteration. The block of code that is executed simply logs the current element of the array to the console. The loop continues to iterate until i is equal to the length of the array, at which point the condition is false and the loop terminates.
 
 Example 1: Display a Text Five Times
+
+```
 // program to display text 5 times
 for (let i = 0; i < 5; i++) {
   console.log("Hello, world!");
@@ -41,10 +50,11 @@ Hello, world!
 Hello, world!
 Hello, world!
 Hello, world!
-
+```
 
 Example 2: To Display Numbers from 1 to 5
 
+```
 // write a program to display numbers from 1 to 5
 for (let i = 1; i <= 5; i++) {
   console.log(i);
@@ -56,6 +66,7 @@ for (let i = 1; i <= 5; i++) {
 3
 4
 5
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -64,12 +75,15 @@ Infinite for loop
 An infinite loop in JavaScript is a loop that runs indefinitely and it never breaks unless the browser is closed or the program is manually stopped.
 Here's an example of an infinite loop using a for loop:
 
+```
 // infinite for loop
 for (;;) {
   console.log("This loop will run indefinitely!");
 }
+```
 
 In this example, the for-loop is initialized with an empty initialization, condition, and final expression, which means that there are no conditions to stop the loop. Therefore, the loop will run indefinitely and keep logging the message "This loop will run indefinitely!" to the console.
+
 Infinite loops can cause your program to become unresponsive and can potentially crash the browser or the environment in which they're running. They should be avoided in most cases. If you're testing an infinite loop in your browser, be prepared to kill the page or even the browser itself.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -80,9 +94,11 @@ The for...in loop in JavaScript is a control flow statement that is used to iter
 
 Here's the syntax for the for...in loop:
 
+```
 for (let variable in object) {
   // code to be executed for each value in iterable
 }
+```
 
 In this syntax, variable is a variable that is assigned to each property name of the object as the loop iterates, and object is the object that is being looped over. For each property of the object, the code block inside the loop is executed once, with the variable denoting the current property name during each iteration.
 Here’s the basic introduction for Objects in JavaScript. You’ll be learning more about Objects in JavaScript in further lessons. 
@@ -92,6 +108,8 @@ In JavaScript, an object is a collection of key-value pairs. Each key-value pair
 The key (also known as "name" or "identifier") is always a string. The value can be any data type, including numbers, strings, Booleans, arrays, functions, and even other objects.
 
 Here's an example of a for...in loop:
+
+```
 let person = {
   name: 'Alice',
   age: 25,
@@ -106,6 +124,8 @@ for (let key in person) {
 name: Alice
 age: 25
 city: New York
+```
+
 In this example, the for...in loop is used to iterate over the properties of the person object. For each iteration, the variable key is assigned the name of a property, and person[key] is used to access the value of the property.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -113,12 +133,20 @@ In this example, the for...in loop is used to iterate over the properties of the
 For...of loop
 
 The for...of loop is a modern loop in JavaScript that is used to iterate over iterable objects, such as Arrays, Strings, Maps, Sets, and so on. It's a more concise and readable syntax compared to traditional for loops and for...in loops.
+
 Here's the syntax for the for...of loop:
+
+```
 for (let variable of iterable) {
   // code to be executed for each value in iterable
 }
+```
+
 The variable variable will be assigned the value of the next element in the iterable object. The loop will continue to execute until the iterator has no more values to return.
+
 Here's an example of a for...of loop:
+
+```
 const array = [1, 2, 3, 4, 5];
 
 for (let number of array) {
@@ -131,6 +159,7 @@ for (let number of array) {
 3
 4
 5
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -143,16 +172,22 @@ While loop
 The while loop in JavaScript is a statement for controlling the flow of code that enables the repeated execution of a code block while a certain condition remains true.
 
 The syntax for a while loop in JavaScript is as follows:
+
+```
 while (condition) {
   // code to be executed while the condition is true
 }
+```
 
 The conditionis an expression that is evaluated before each iteration of the loop. 
+
 If the condition is true, the code enclosed within the loop will be executed. 
+
 When the condition is false, the loop will terminate, and the program will proceed to execute from the location immediately following the loop.
 
 Example 1: To display Numbers from 1 to 5
 
+```
 let i = 1;
 while (i <= 5) {
   console.log(i);
@@ -165,12 +200,15 @@ while (i <= 5) {
 3
 4
 5
+```
 
 Explanation
+
 In this example, the condition is i <= z. The loop will continue to execute as long as the value of i remains less than or equal to 5. Inside the loop, the current value of i is printed to the console, and then i is incremented by 1 using the i++ shorthand for i = i + 1.
 
 Example 2: Sum of Positive Numbers Only
 
+```
 // array of numbers
 const numbers = [5, -2, 10, 0, -3, 8, -1];
 
@@ -193,16 +231,21 @@ console.log(`The sum of positive numbers is ${sum}`);
 
 // Output
 23
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 do...while loop
 
 The do...while loop in JavaScript shares similarities with the while loop, except that it runs the loop body at least once, regardless of whether the condition is false or not. The loop condition is checked after each iteration, and the loop continues to execute until the condition becomes false.
+
 Here's the syntax for the do...while loop in JavaScript:
+
+```
 do {
   // loop body
 } while (condition);
+```
 
 The do...while loop consists of the following parts:
 
@@ -214,6 +257,7 @@ The while keyword: This keyword is followed by a condition enclosed in parenthes
 
 Example: To display Numbers from 1 to 5
 
+```
 let i = 1;
 
 do {
@@ -227,6 +271,7 @@ do {
 3
 4
 5
+```
 
 Explanation
 
@@ -250,6 +295,7 @@ Working of JavaScript break Statement:
 
 Example 1: break with for Loop
 
+```
 for (let i = 1; i <= 10; i++) {
   if (i === 5) {
     break;
@@ -262,11 +308,13 @@ for (let i = 1; i <= 10; i++) {
 2
 3
 4
+```
 
 In this example, the loop will print out the numbers 1 through 4, but when i becomes 5, the break statement is executed, and the loop terminates early.
 
 Example 2: break with while Loop
 
+```
 let i = 1;
 while (i <= 10) {
   if (i === 5) {
@@ -281,6 +329,7 @@ while (i <= 10) {
 2
 3
 4
+```
 
 In this case, the loop will also print out the numbers 1 through 4 before terminating early when i becomes 5.
 
@@ -291,6 +340,8 @@ continue Statement
 The continue statement in JavaScript is employed within loops to bypass the current iteration and proceed to the subsequent iteration of the loop. 
 
 Example: 
+
+```
 // Example of using continue statement
 
 for (var i = 1; i <= 5; i++) {
@@ -307,6 +358,9 @@ console.log("Exited the loop.");
 // Output
 Iteration: 2
 Iteration: 4
+
+```
+
 Exited the loop. 
 
 In this example, there is a for loop that iterates five times, from 1 to 5. Inside the loop, there is an if statement that checks if i is odd. If i is odd, the continue statement is executed, which skips the rest of the code in the loop for that iteration and moves on to the next iteration.
@@ -316,8 +370,10 @@ In this example, there is a for loop that iterates five times, from 1 to 5. Insi
 continue with for Loop
 
 In JavaScript, the continue statement is used within a loop to skip the current iteration and move on to the next iteration. It is commonly used when you want to skip certain values or operations within a loop and move on to the next one. The continue statement works with all types of loops, including the for loop.
+
 Here is an example of using continue with a for loop in JavaScript:
 
+```
 for (let i = 1; i <= 5; i++) {
   if (i === 3) {
     // skip iteration if i equals 3
@@ -331,8 +387,10 @@ for (let i = 1; i <= 5; i++) {
 2
 4
 5
+```
 
 In the above example, the loop will iterate through the values of i from 1 to 5. In the event that i is equal to 3, the continue statement will be executed, causing the loop to disregard the present iteration and proceed to the subsequent one. This means that the number 3 will not be printed to the console.
+
 It's important to note that the continue statement only skips the current iteration and moves on to the next one. It does not stop the loop entirely. If you want to stop the loop based on a condition, you should use the break statement instead.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
