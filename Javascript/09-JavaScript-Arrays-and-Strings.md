@@ -26,7 +26,9 @@ Array literal
 
 This is the most common way to create an array, using square brackets [] and placing the array elements inside the brackets, separated by commas. 
 
+```
 let fruits = ['apple', 'banana', 'orange'];
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -34,12 +36,15 @@ Array Constructor
 
 An alternative method to create an array involves using the Array() constructor with the new keyword. With this approach, the length of the array needs to be specified as an argument.
 
+```
 let numbers = new Array(3); // creates an empty array with a length of 3
+```
 
 Note: It is recommended to create arrays using array literals instead of other methods.
  
 An array in JavaScript can contain not only simple data types but also more complex ones, such as arrays, functions, and other objects. 
 
+```
 For example:
 
 let myArray = [
@@ -56,6 +61,7 @@ let myArray = [
 console.log(myArray[3][1]); // Output: 4
 
 myArray[5](); // Output: This is a function inside an array
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -63,6 +69,7 @@ Accessing Array Elements
 
 Accessing array elements is possible using indices starting from 0 and incrementing by 1 for each subsequent element.
 
+```
 For example:
 
 const fruits = ['apple', 'banana', 'orange'];
@@ -70,6 +77,7 @@ const fruits = ['apple', 'banana', 'orange'];
 console.log(fruits[0]); // output: "apple"
 console.log(fruits[1]); // output: "banana"
 console.log(fruits[2]); // output: "orange"
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -78,23 +86,29 @@ Adding Element to an Array
 The push() method inserts an element to the array's last index.
 
 For example:
+
+```
 let myArray = [1, 2, 3];
 
 // adds an element to the array end
 myArray.push(4);
 
 console.log(myArray); // output is: [1, 2, 3, 4]
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 The unshift() method inserts an element at the beginning of the array.
 
 For example:
+
+```
 const fruits = ['banana', 'apple', 'orange'];
 console.log(fruits); // ['banana', 'apple', 'orange']
 
 fruits.unshift('grape');
 console.log(fruits); // ['grape', 'banana', 'apple', 'orange']
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -102,6 +116,7 @@ Changing Array Elements
 
 You can also modify elements or add new ones by accessing them through their index value in the array.
 
+```
 let fruits = ['apple', 'banana', 'cherry'];
 console.log(fruits); // output: ['apple', 'banana', 'cherry']
 
@@ -110,15 +125,22 @@ console.log(fruits); // output: ['apple', 'pear', 'cherry']
 
 fruits[3] = 'orange';
 console.log(fruits); // output: ['apple', 'pear', 'cherry', 'orange']
+```
 
 For example:
+
 Suppose an array has three elements. If you try to insert an element at index 4 (fifth element), the fourth element will be undefined.
+
+```
 let dailyActivities = [ 'eat', 'sleep', 'play'];
 
 // this will add the new element 'running' at the 4 index
+
 dailyActivities[4] = 'running';
 
 console.log(dailyActivities); // ["eat", "sleep", "play", undefined, "running"]
+```
+
 If you attempt to add elements to higher indices, the indices in between will have an undefined value.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -128,31 +150,42 @@ Removing Array Element
 By using the pop() method, you can remove the final element from the array while also receiving its returned value.
 
 For example:
+
+```
 let fruits = ['apple', 'banana', 'orange'];
 let removedFruit = fruits.pop();  // removes 'orange' from the array and returns it
+
 console.log(fruits);              // prints ['apple', 'banana']
 console.log(removedFruit);        // prints 'orange'
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 The shift() method will remove the first element and returns the removed element as its returned value.
 
 For example:
+
+```
 let fruits = ['apple', 'banana', 'orange'];
 let removedFruit = fruits.shift();
 
 console.log(fruits);         // Output: ['banana', 'orange']
 console.log(removedFruit);   // Output: 'apple'
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Length of an Array
 
 The length of an array can be obtained using the length property of the array.
+
 For example:
+
+```
 let myArray = ["apple", "banana", "orange"];
 
 console.log(myArray.length); // Output: 3
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -162,6 +195,7 @@ JavaScript has several array methods that can be used to perform calculations an
 
 Some of the commonly used methods include:
 
+```
 Operation
 push()
 
@@ -306,18 +340,23 @@ Inverts the sequence of the elements within an array.
 
 Example
 arr.reverse();
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Array Methods Examples
 
+```
 let numbers = [3, 5, 1, 8, 2];
 
 // sort the array in ascending order
 numbers.sort();
 console.log(numbers);             // [1, 2, 3, 5, 8]
+```
 
 // find the index of the element with value 5
+
+```
 let index = numbers.indexOf(5);
 console.log(index);               // 3
 
@@ -337,6 +376,7 @@ console.log(hasFive);             // true
 // find the first element that is satisfying a condition
 let greaterThanFour = allNumbers.find(number => number > 4);
 console.log(greaterThanFour);     // 5
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -347,6 +387,8 @@ Arrays in JavaScript are implemented as objects and their indices are treated as
 As arrays are objects, their elements are stored as references, so when an array is copied, any modification to it will also be reflected in an original array.
 
 For example:
+
+```
 let arr = [{name: 'John'}, {name: 'Jane'}];
 let arr1 = arr;
 arr1.push({name: 'Bob'});
@@ -357,37 +399,60 @@ console.log(arr1); // [{name: 'John'}, {name: 'Jane'}, {name: 'Bob'}]
 arr[0].name = 'Mike';
 console.log(arr); // [{name: 'Mike'}, {name: 'Jane'}, {name: 'Bob'}]
 console.log(arr1); // [{name: 'Mike'}, {name: 'Jane'}, {name: 'Bob'}]
+```
+
 You can also store values by passing a named key in an array.
+
 For example:
+
+```
 let arr = ['h', 'e'];
 arr.name = 'John';
 
 console.log(arr); // ["h", "e"]
 console.log(arr.name); // "John"
 console.log(arr['name']); // "John"
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Activity: Code Practice
+
 Use the appropriate Array methods on the given array according to the instructions and print each of step in console.
+
 Use the push() method to add a new element, grape to the end of the fruits array.
+
 The pop() method removes the last element from the fruit array.
 Use the shift() method to remove the first element from the fruits array.
+
+```
 const fruits = ['apple', 'banana', 'orange', 'kiwi', 'pear'];
 Solution
 const fruits = ['apple', 'banana', 'orange', 'kiwi', 'pear'];
+```
 
+```
 // 1. Use the push() method to add a new element, 'grape', to the end of the fruits array.
+
 fruits.push('grape');
+
 console.log(fruits); // Output: ['apple', 'banana', 'orange', 'kiwi', 'pear', 'grape']
+```
 
+```
 // 2. The pop() method removes the last element from the fruit array.
-fruits.pop();
-console.log(fruits); // Output: ['apple', 'banana', 'orange', 'kiwi', 'pear']
 
+fruits.pop();
+
+console.log(fruits); // Output: ['apple', 'banana', 'orange', 'kiwi', 'pear']
+```
+
+```
 // 3. Use the shift() method to remove the first element from the fruits array.
+
 fruits.shift();
 console.log(fruits); // Output: ['banana', 'orange', 'kiwi', 'pear']
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -395,12 +460,14 @@ Multidimensional Array
 
 A multidimensional array is an array that holds one or more arrays as its elements.
 
+```
 For instance:
 const matrix = [
   [1, 2, 3],
   [4, 5, 6],
   [7, 8, 9]
 ];
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -408,6 +475,7 @@ Create a Multidimensional Array
 
 Example: We have created a 2-dimensional array called myArray with three rows and two columns. Each row is an array containing two strings.
 
+```
 const myArray = [];
 myArray.push(["apple", "orange"]);
 myArray.push(["grape", "pear"]);
@@ -418,6 +486,7 @@ console.log(myArray);
 /* Output
 [["apple", "orange"], ["grape", "pear"], ["pineapple", "mango"]]
 */
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -426,6 +495,7 @@ Access Elements of Multidimensional Array
 The elements belonging to the multidimensional array can be accessed using indices (0, 1, 2, etc.).
 
 For example:
+```
 let x = [
 ['Jack', 24],
 ['Sara', 25],
@@ -440,6 +510,7 @@ console.log(x[0][0]); // Jack
 
 // accessing the second item of the third inner array
 console.log(x[2][1]); // 26
+```
 
 One way to conceptualize a multi-dimensional array, such as 'x', is to view it as a table with 3 rows and 2 columns.
 
@@ -451,34 +522,45 @@ Array's push() method or an indexing notation can be used to add elements to a m
 
 Adding Element to the Outer Array
 
+```
 let studentData = [['Jack', 24], ['Sara', 23],];
 studentsData.push(['Mark', 24]);
 
 console.log(studentsData); //[["Jack", 24], ["Sara", 23], ["Mark", 24]
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Adding Element to the Inner Array
 
+```
 Using Index Notation
+
 let studentsData = [['Jak', 23], ['Sara', 24],];
 studentsData[1][2] = 'hello';
 
 console.log(studentsData); // [["Jack", 23], ["Sara", 24, "hello"]]
+```
 
+```
 Using push() method
+
 let studentsData = [['Jack', 23], ['Sara', 24],];
 studentsData[1].push('hello');
 
 console.log(studentsData); // [["Jack", 23], ["Sara", 24, "hello dear"]]
+```
 
 An element can be added at a specific index using the splice() method of an array.
+
+```
 let studentsData = [['Sara', 23],['Jack', 24],];
 
 // adding element at index 1
 studentsData.splice(1, 0, ['Mark', 24]);
 
 console.log(studentsData); // [['Sara', 23], ["Mark", 24], ['Jack', 24]]
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -486,24 +568,34 @@ Remove an Element from a Multidimensional Array
 
 Array's pop() method can be used to remove an element from a multi-dimensional array. 
 
+```
 Remove Element from Outer Array
+
 let studentData = [['Jack', 25], ['Sara', 27],];
 studentData.pop();
 
 console.log(studentData); // [["Jack", 25]]
+```
 
+```
 Remove Element from Inner Array
+
 let studentData = [['Jack', 25], ['Sarah', 23]];
 studentData[1].pop();
 
 console.log(studentData); // [["Jack", 25], ["Sarah"]]
+```
 
 Using the splice() method of an array, it is possible to remove an element at a particular index.
+
+```
 let studentsData = [['Jack', 24], ['Mark', 23]];
 
 // removing 1 index array item
 studentsData.splice(1,1);
+
 console.log(studentsData); // [["Jack", 24]]
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -512,6 +604,8 @@ Iterating over Multidimensional Array
 To iterate over a multidimensional array, you can use the forEach() method of the Array object.
 
 For example:
+
+```
 let studentsData = [['Ryan', 24], ['Sara', 23],];
 
 // iterating over the studentsData
@@ -526,13 +620,17 @@ Ryan
 24
 Sara
 23
+```
 
 The outer array elements are iterated using the first forEach() method, while the inner array elements are iterated using the second forEach() method.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Iterating over a multidimensional array can also be achieved using the for...of loop.
+
 For example:
+
+```
 let studentsData = [['Ryan', 24], ['Sara', 23]];
 
 for (let i of studentsData) {
@@ -540,11 +638,15 @@ for (let i of studentsData) {
     console.log(j);
   }
 }
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 To iterate over a multidimensional array, you can also use a for() loop.
+
 For example:
+
+```
 let studentsData = [['Ryan', 24], ['Sara', 27]];
 
 // looping outer array elements
@@ -558,6 +660,7 @@ for(let i = 0; i < studentsData.length; i++){
         console.log(studentsData[i][j]);
     }
 }
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -568,18 +671,30 @@ Create JavaScript Strings
 To create a string in JavaScript, surround the text with quotes.
 
 There are three options to choose from:
+
+```
 Single quotes: 'Hello, World'
+
 Double quotes: "Hello, World"
+
 Template Literals (Backticks): `Hello, World`
+```
 
 For example:
+
+```
 //strings example
+
 let singleQuoteString = 'This is a string using single quotes.';
 let doubleQuoteString = "This is a string using double quotes.";
 let templateLiteralString = `This is a string using a template literal.`;
+```
 
 Single or double quotes are preferred, as they have practically the same function.
+
 Backticks are commonly used to incorporate variables or expressions into a string. The ${} syntax is used to interpolate the values of the variables into the string.
+
+```
 const name = "Ryan";
 const age = 28;
 
@@ -587,6 +702,7 @@ console.log(`My name is ${name} and I am ${age} years old.`);
 
 // Output
 My name is Ryan and I am 28 years old.
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -595,14 +711,20 @@ Access String Characters
 There are two ways to access the characters in a string.
 
 First approach is to treat strings as if they were arrays.
+
+```
 const a = 'hello';
 console.log(a[1]); // "e"
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Another option is to use the charAt() method. 
+
+```
 const a = 'hello';
 console.log(a.charAt(1)); // "e"
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -612,14 +734,21 @@ JavaScript Strings are immutable
 
 In JavaScript, strings are immutable, meaning their characters cannot be changed. 
 
+```
 let a = 'hello';
 a[0] = 'H';
+
 console.log(a); // "hello"
+```
 
 You can assign a variable name to a new string.
+
+```
 let a = 'hello';
 a = 'Hello';
+
 console.log(a); // "Hello"
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -627,9 +756,12 @@ JavaScript String is Case-Sensitive
 
 It's important to remember that capitalizing letters matters. Lowercase and uppercase letters are treated as separate values. 
 
+```
 const a = 'a';
 const b = 'A'
+
 console.log(a === b); // false
+```
 
 In JavaScript, remember that a and A are considered distinct values.
 
@@ -638,23 +770,32 @@ In JavaScript, remember that a and A are considered distinct values.
 JavaScript Multiline Strings
 
 You have two options to use a multiline string: the + operator or the \\ operator. 
+
+```
 // using the + operator
+
 const message1 = 'This is a long message ' +
     'that spans across multiple lines' +
     'in the code.'
 
 // using the \ operator
+
 const message2 = 'This is a long message \
 that spans across multiple lines \
 in the code.'
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 JavaScript String Length
 
 To determine the length of a string, you can utilize the built-in length property. 
+
+```
 const a = 'hello';
+
 console.log(a.length); // 5
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -662,6 +803,7 @@ JavaScript String Methods
 
 Below are some commonly used methods for working with strings in JavaScript:
 
+```
 Method
 length
 Description
@@ -731,6 +873,7 @@ Description
 Removes whitespace from both ends of the string
 Example
 " hello ".trim() returns "hello"
+```
 
 These methods provide various ways to manipulate strings in JavaScript, such as finding specific characters or substrings, joining multiple strings together, or converting a string to all lowercase or uppercase.
 
@@ -740,24 +883,35 @@ JavaScript String() Function
 
 The String() function converts different data types to strings. 
 
+```
 For instance:
+
 const a = 225; // number
 const b = true; // boolean
+```
 
+```
 //converting to string
+
 const result1 = String(a);
 const result2 = String(b);
 
 console.log(result1); // "225"
 console.log(result2); // "true"
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Escape Character
+
 To include special characters in a string, you can use the escape character \, also known as a backslash.
+
 For example:
+
+```
 const name = 'My name is \'Peter\'.';
 console.log(name);   // My name is 'Peter'.
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
