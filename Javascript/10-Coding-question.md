@@ -3,6 +3,7 @@ The Word Reverser
 In a realm of linguistic marvels, a task has been bestowed upon you to create a JavaScript function that can reverse the order of words in a given string. The people of the realm are eager to explore the magic of word reversal to unlock hidden meanings within their sentences.
 Write a JavaScript function called reverseWords that takes a sentence (a string containing multiple words separated by spaces) as input and returns the sentence with the order of words reversed.
 
+```
 Example 1:
 Input:
 "Hello, world!"
@@ -15,11 +16,13 @@ Input:
 
 Output:
 "fox brown quick The"
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Solution:
 
+```
 function reverseWords(sentence) {
   // Split the sentence into an array of words
   const wordsArray = sentence.split(' ');
@@ -39,6 +42,7 @@ const example2 = "The quick brown fox";
 
 console.log(reverseWords(example1)); // Output: "world! Hello,"
 console.log(reverseWords(example2)); // Output: "fox brown quick The"
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -48,6 +52,7 @@ In the mystical land of characters and strings, a group of adventurers seeks to 
 Write a JavaScript function called isPalindrome that takes a string as input and returns true if it is a palindrome, and false otherwise.
 A palindrome is case-sensitive and should be read from left to right and right to left in the same way.
 
+```
 Example 1:
 Input:
 "racecar"
@@ -63,11 +68,13 @@ false
 Example 3:
 Input:
 "Madam In Eden, I'm Adam"
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Solution:
 
+```
 function isPalindrome(str) {
   // Remove non-alphanumeric characters and convert to lowercase
   const cleanStr = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
@@ -80,6 +87,7 @@ function isPalindrome(str) {
 console.log(isPalindrome("racecar")); // Output: true
 console.log(isPalindrome("hello"));   // Output: false
 console.log(isPalindrome("Madam In Eden, I'm Adam")); // Output: true
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -89,6 +97,7 @@ In the land of cyclical arrays, the people need a JavaScript function that can r
 Write a JavaScript function called rotateArray that takes an array of integers and a positive integer k as inputs. The function should rotate the array k positions to the right.
 Note: The value of k can be greater than the length of the array, so multiple rotations might be needed.
 
+```
 Example 1:
 Input:
 [1, 2, 3, 4, 5]
@@ -104,11 +113,13 @@ Example 2:
 
 Output:
 [ 8, 9, 7 ]
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Solution:
 
+```
 function rotateArray(arr, k) {
   // Ensure k is within the length of the array
   k = k % arr.length;
@@ -130,4 +141,5 @@ console.log(example1); // Output: [4, 5, 1, 2, 3)
 const example2 = rotateArray([7, 8, 9], 5);
 console.log(example2); // Output: [8, 9, 7]
 
+```
 
