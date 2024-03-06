@@ -1,31 +1,37 @@
 1. The JSON Parser
 
 In a world of data exchange, the people need a JavaScript function that can parse JSON strings and convert them into JavaScript objects. They seek the power to transform their data structures seamlessly, enabling communication and understanding between systems.
+
 Write a JavaScript function called parseJSON that takes a JSON string as input and returns the corresponding JavaScript object. Assume that the input JSON string will always be valid.
 
+```
 Example 1:
 Input:
 {"name": "John", "age": 30, "isStudent": true}
 
 Output:
 { name: 'John', age: 30, isStudent: true }
+
 Example 2:
 Input:
 {"colors": ["red", "green", "blue"], "length": 3}
 
 Output:
 { colors: ['red', 'green', 'blue'], length: 3 }
+
 Example 3:
 Input:
 {"colors": ["red", "green", "blue"], "length": 3}
 
 Output:
 { colors: ['red', 'green', 'blue'], length: 3 }
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Solution
 
+```
 function parseJSON(jsonString) {
   return JSON.parse(jsonString);
 }
@@ -44,6 +50,7 @@ console.log(example2Output);
 const example3Input = '{"colors": ["red", "green", "blue"], "length": 3}';
 const example3Output = parseJSON(example3Input);
 console.log(example3Output);
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -53,6 +60,7 @@ In a world of data amalgamation, the people need a JavaScript function that can 
 
 Write a JavaScript function called mergeObjects that takes two objects as inputs and returns a new object that combines the properties of both objects. If there are overlapping properties, the value from the second object should take precedence. 
 
+```
 Example 1:
 Input:
 { "name": "John", "age": 30 }
@@ -67,10 +75,11 @@ Input:
 
 Output:
 { a: 1, b: 2, c: 3 }
-
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+```
 function mergeObjects(obj1, obj2) {
   // Use the spread operator to create a new object with properties from both objects
   return { ...obj1, ...obj2 };
@@ -87,6 +96,7 @@ const example2Obj1 = { "a": 1, "b": 2 };
 const example2Obj2 = { "c": 3 };
 const example2Output = mergeObjects(example2Obj1, example2Obj2);
 console.log(example2Output);
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -96,6 +106,7 @@ In a world of complex data structures, the people need a JavaScript function tha
 Write a JavaScript function called findNestedValue that takes an object and a string representing the property path as inputs. The property path will be a dot-separated string, representing the hierarchy of nested properties.
 The function should return the value of the property if found within the nested object. If the property is not found or any intermediate property is not an object, the function should return null.
 
+```
 Example 1:
 Input:
 {"person":{"name": "John","age": 30,"address": {"city": "New York","country":"USA"}}}
@@ -120,9 +131,11 @@ person.address.postalCode
 
 Output:
 null
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+```
 function findNestedValue(obj, path) {
   // Split the property path into an array
   const properties = path.split('.');
@@ -157,4 +170,4 @@ console.log(example2Output);
 const example3Input = {"person":{"name": "John","age": 30,"address": {"city": "New York","country":"USA"}}};
 const example3Output = findNestedValue(example3Input, 'person.address.postalCode');
 console.log(example3Output);
-
+```
