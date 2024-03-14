@@ -360,3 +360,52 @@ It's important to note that when using the innerHTML property, you should be cau
 By utilizing the textContent and innerHTML properties, you can easily add and update text and HTML content within DOM elements.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Practical Implementation Step 1:
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Selectors and Methods</title>
+</head>
+<body>
+  <div id="myElement">Hello, World!</div>
+
+  <div class="myClass">This is a div with the class "myClass".</div>
+  <div class="myClass">Another div with the class "myClass".</div>
+
+  <script>
+    // getElementById()
+    var elementById = document.getElementById("myElement");
+    console.log(elementById);
+
+    // getElementsByTagName()
+    var elementsByTagName = document.getElementsByTagName("div");
+    console.log(elementsByTagName);
+
+    // getElementsByClassName()
+    var elementsByClassName = document.getElementsByClassName("myClass");
+    console.log(elementsByClassName);
+
+    // querySelector()
+    var elementSelector = document.querySelector("#myElement");
+    console.log(elementSelector);
+
+    // querySelectorAll()
+    var elementsSelectorAll = document.querySelectorAll(".myClass");
+    console.log(elementsSelectorAll);
+
+    // createElement() and appendChild()
+    var newElement = document.createElement("p");
+    newElement.textContent = "This is a new paragraph.";
+    document.body.appendChild(newElement);
+
+    // removeChild()
+    var elementToRemove = elementsByTagName[0];
+    elementToRemove.parentNode.removeChild(elementToRemove);
+  </script>
+</body>
+</html>
+```
+
