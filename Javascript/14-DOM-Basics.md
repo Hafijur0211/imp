@@ -409,3 +409,115 @@ Practical Implementation Step 1:
 </html>
 ```
 
+In this example, we have a simple HTML document with a few elements. The JavaScript code demonstrates the usage of DOM selectors (getElementById(), getElementsByTagName(), getElementsByClassName(), querySelector(), and querySelectorAll()) to select specific elements. It also showcases the usage of DOM methods (createElement(), appendChild(), and removeChild()) to create, append, and remove elements dynamically.
+
+When you run this code in a web browser and inspect the browser's console, you will see the selected elements logged as output. Additionally, a new paragraph element is created and appended to the <body>, and the first <div> element is removed from its parent.
+
+---
+
+Adding Inline Style
+
+To add inline styles to elements in the DOM (Document Object Model), you can use the style property of an element. The style property allows you to directly manipulate the inline CSS styles of an element. Here's how you can add inline styles using the DOM:
+```
+var element = document.getElementById("myElement");
+element.style.property = "value";
+```
+In the above code snippet, replace "myElement" with the ID of the element you want to modify. Then, set the desired CSS property and value using the style property. For example, if you want to set the background color of the element to red:
+```
+var element = document.getElementById("myElement");
+element.style.backgroundColor = "red";
+```
+You can add multiple inline styles by chaining the property assignments:
+```
+var element = document.getElementById("myElement");
+element.style.backgroundColor = "red";
+element.style.fontSize = "20px";
+element.style.marginTop = "10px";
+```
+In this example, we set the background color, font size, and margin top properties of the element.
+
+Note that when setting the property name using the style property, you should use camel-case notation for CSS properties that have hyphens. For example, background-color becomes backgroundColor.
+
+Additionally, keep in mind that using inline styles should be done sparingly and for specific cases. It is generally recommended to use CSS classes or modify styles through CSS rules whenever possible, as it helps separate the presentation from the JavaScript logic and makes the code more maintainable.
+
+---
+
+Practical Implementation Step 2:
+```
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Inline Styling Example</title>
+</head>
+<body>
+  <div id="myElement" style="color: red; font-size: 24px; background-color: yellow;">Hello, World!</div>
+
+  <script>
+    var elementById = document.getElementById("myElement");
+
+    // Changing inline styles
+    elementById.style.color = "blue";
+    elementById.style.fontSize = "18px";
+    elementById.style.backgroundColor = "green";
+
+    // Adding multiple inline styles
+    elementById.style.cssText = "color: purple; font-weight: bold; text-align: center;";
+
+    // Removing an inline style
+    elementById.style.removeProperty("background-color");
+  </script>
+</body>
+</html>
+```
+
+Initially, the element has inline styles defined in the HTML using the `style` attribute.
+
+The JavaScript code accesses the element using `getElementById`.
+
+Inline styles are modified using the `style` property by directly assigning values to specific style properties like `color`, `fontSize`, and `backgroundColor`.
+
+Multiple inline styles can be added using the `cssText` property by providing a string containing the desired CSS rules.
+
+An inline style can be removed using the `removeProperty` method by specifying the style property to be removed.
+
+By manipulating the `style` property, you can easily apply and modify inline styles on DOM elements.
+
+---
+
+Editing Attributes
+
+To edit attributes in the DOM (Document Object Model), you can use the setAttribute(), getAttribute(), and removeAttribute() methods. These methods allow you to modify, retrieve, and remove attributes of HTML elements. Here's how you can use them:
+
+setAttribute()
+The setAttribute() method in JavaScript is used to add or modify an attribute of an HTML element. It allows you to set the value of a specified attribute on an element dynamically.
+
+The syntax for using `setAttribute()` is as follows:
+
+```
+element.setAttribute(attributeName, attributeValue);
+```
+
+`element`: The HTML element to which the attribute will be added or modified.
+
+`attributeName`: The name of the attribute to be set.
+
+`attributeValue`: The value to be assigned to the attribute.
+
+Here's an example that demonstrates the usage of setAttribute():
+
+```
+<button id="myButton">Click me</button>
+
+var button = document.getElementById('myButton');
+button.setAttribute('disabled', 'true');
+```
+
+In the above example, the `setAttribute()` method is used to set the `disabled` attribute of the button element to `'true'`. This effectively disables the button, making it unclickable.
+
+If the specified attribute already exists on the element, `setAttribute()` will update its value. If the attribute doesn't exist, `setAttribute()` will create a new attribute with the specified name and value.
+
+It's important to note that when using `setAttribute()`, the attribute value is treated as a string. If you need to set a boolean attribute, such as `disabled` or `checked`, you should pass the string `'true'` or `'false'` as the attribute value.
+
+Overall, `setAttribute()` provides a convenient way to modify attributes of HTML elements using JavaScript dynamically. It allows for flexible manipulation of element properties, enabling you to adapt the behavior and appearance of elements based on application logic or user interactions.
+
+---
