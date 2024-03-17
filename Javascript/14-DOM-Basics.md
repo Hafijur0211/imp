@@ -27,13 +27,13 @@ Text nodes contain the actual text content within an element. For example, the t
 
 The DOM tree allows developers to access and manipulate these nodes using programming languages like JavaScript. By accessing the DOM, developers can dynamically modify the content, style, and structure of a web page.
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---
 
 Targeting Nodes with Selectors
 
 In DOM programming, selectors are used to target and select specific nodes within the DOM tree. Selectors allow you to identify elements based on their attributes, tag names, or relationships with other elements. There are various methods and syntaxes available to target nodes using selectors in the DOM. Here are some commonly used ones:
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---
 
 1. getElementById()
 
@@ -50,6 +50,7 @@ If no element with the specified id is found, the method returns null.
 It's important to note that the id attribute of an element should be unique within the HTML document. If multiple elements have the same id, the method will only return the first element it encounters during the search.
 
 Example usage:
+
 ```
 <!-- HTML -->
 <div id="myElement">Hello, World!</div>
@@ -63,7 +64,7 @@ In the example above, getElementById('myElement') is used to retrieve a referenc
 
 Overall, getElementById() is a fundamental method that provides a convenient way to access and manipulate specific elements in the DOM based on their unique identifiers.
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---
 
 2. getElementsByTagName()
 
@@ -93,7 +94,6 @@ Live Collection: The returned collection is live, meaning if the DOM changes (e.
 
 Tag Name Case Sensitivity: The getElementsByTagName() method is case-insensitive, meaning it matches elements regardless of whether the tag name is specified in uppercase or lowercase.
 
-
 ```
 // Selects all <P> and <p> elements
 var elements = document.getElementsByTagName('P');
@@ -103,7 +103,7 @@ Performance Considerations: While getElementsByTagName() is a convenient method,
 
 The getElementsByTagName() method is a straightforward way to select elements based on their tag names and is widely used for basic DOM manipulation and traversal. However, it should be noted that newer methods like querySelectorAll() offer more powerful and flexible options for element selection based on various CSS-like selectors.
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---
 
 3. getElementsByClassName()
 
@@ -136,7 +136,7 @@ Note that getElementsByClassName() returns a collection, not an array. If you wa
 
 In summary, getElementsByClassName() is a convenient method for selecting and manipulating elements based on their CSS class name, allowing you to target specific elements within a document or a specific portion of the DOM.
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---
 
 4. querySelector()
 
@@ -170,23 +170,25 @@ It's important to note that querySelector() only returns the first matching elem
 This will select all elements with the class "myClass" and assign them to the elements variable as a NodeList (a collection of nodes).
 
 Example usage:
+
 ```
 const elements = document.querySelectorAll(".myClass");
 ```
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---
 
 5. querySelectorAll()
 
 The querySelectorAll() method in JavaScript is a powerful DOM method that allows you to select multiple elements from the DOM using a CSS selector. It returns a static NodeList representing a collection of elements that match the specified selector.
 
 The syntax for querySelectorAll() is as follows:
+
 ```
 var elementList = document.querySelectorAll(selector);
 ```
 
 Here, document refers to the global document object, which represents the current HTML document. The querySelectorAll() method is called on the document object, but it can also be called on any DOM element to search for elements within that specific element.
- 
+
 The selector parameter is a string representing the CSS selector used to match the elements. It can be any valid CSS selector, such as an element name, class name, ID, attribute, or a combination of selectors.
 
 For example, to select all `<p>` elements in the document, you can use:
@@ -196,7 +198,7 @@ var paragraphs = document.querySelectorAll('p');
 ```
 
 The method returns a NodeList, which is a collection of nodes similar to an array but with a few differences. The NodeList represents a snapshot of the selected elements at the time querySelectorAll() was called. It doesn't dynamically update as the DOM changes.
- 
+
 You can iterate over the NodeList using a for loop, forEach(), or other array iteration methods. Each item in the NodeList corresponds to a matched element, and you can access their properties and perform operations on them.
 
 Here's an example that adds a CSS class to all `<p>` elements selected using querySelectorAll():
@@ -212,13 +214,13 @@ In the above code, the classList.add() method is used to add the CSS class 'high
 
 Overall, querySelectorAll() provides a flexible and convenient way to select multiple elements from the DOM using CSS selectors, allowing you to perform various operations or apply changes to the selected elements.
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---
 
 DOM Methods
 
 DOM (Document Object Model) methods are a set of JavaScript methods that allow you to interact with HTML and XML documents. They provide a way to access, manipulate, and modify elements within a web page. Here are some commonly used DOM methods:
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---
 
 1. createElement()
 
@@ -242,11 +244,13 @@ Here's an example that demonstrates how to use createElement() to create a new d
 // Create a new div element
 var newDiv = document.createElement("div");
 ```
+
 ```
 // Modify the properties of the new div
 newDiv.textContent = "This is a dynamically created div.";
 newDiv.style.backgroundColor = "blue";
 ```
+
 ```
 // Append the new div to the document
 document.body.appendChild(newDiv);
@@ -256,7 +260,7 @@ In the above example, createElement("div") creates a new div element. Subsequent
 
 The createElement() method is commonly used when you need to dynamically generate and insert elements into the DOM, allowing for flexible and dynamic web page construction and manipulation using JavaScript.
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---
 
 2. appendChild()
 
@@ -298,7 +302,7 @@ In the example above, a new `<p>` (paragraph) element is created and assigned so
 
 The appendChild() method is a fundamental DOM operation that allows you to dynamically add new content to an existing document structure, enabling dynamic updates and manipulations in web applications.
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---
 
 2. removeChild()
 
@@ -329,7 +333,7 @@ It's important to note that when using removeChild(), you need a reference to bo
 
 These are just a few examples of the many DOM methods available. DOM methods provide powerful functionality for manipulating and interacting with web pages dynamically using JavaScript.
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---
 
 Adding Text and HTML Content
 
@@ -343,7 +347,7 @@ element.textContent = "Hello, world!";
 ```
 
 In this example, the text content of the element with the ID "myElement" is set to "Hello, world!".
- 
+
 The innerHTML property allows you to set or retrieve the HTML content of an element. To add or update HTML content, assign the desired HTML string to the innerHTML property of the element.
 
 Example:
@@ -359,7 +363,7 @@ It's important to note that when using the innerHTML property, you should be cau
 
 By utilizing the textContent and innerHTML properties, you can easily add and update text and HTML content within DOM elements.
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---
 
 Practical Implementation Step 1:
 
@@ -418,22 +422,28 @@ When you run this code in a web browser and inspect the browser's console, you w
 Adding Inline Style
 
 To add inline styles to elements in the DOM (Document Object Model), you can use the style property of an element. The style property allows you to directly manipulate the inline CSS styles of an element. Here's how you can add inline styles using the DOM:
+
 ```
 var element = document.getElementById("myElement");
 element.style.property = "value";
 ```
+
 In the above code snippet, replace "myElement" with the ID of the element you want to modify. Then, set the desired CSS property and value using the style property. For example, if you want to set the background color of the element to red:
+
 ```
 var element = document.getElementById("myElement");
 element.style.backgroundColor = "red";
 ```
+
 You can add multiple inline styles by chaining the property assignments:
+
 ```
 var element = document.getElementById("myElement");
 element.style.backgroundColor = "red";
 element.style.fontSize = "20px";
 element.style.marginTop = "10px";
 ```
+
 In this example, we set the background color, font size, and margin top properties of the element.
 
 Note that when setting the property name using the style property, you should use camel-case notation for CSS properties that have hyphens. For example, background-color becomes backgroundColor.
@@ -443,6 +453,7 @@ Additionally, keep in mind that using inline styles should be done sparingly and
 ---
 
 Practical Implementation Step 2:
+
 ```
 <!DOCTYPE html>
 <html>
@@ -524,7 +535,7 @@ Overall, `setAttribute()` provides a convenient way to modify attributes of HTML
 
 getAttribute()
 
-The `getAttribute()` method is invoked on an HTML element (`element`) and takes a single parameter (`attributeName`) that specifies the name of the attribute you want to retrieve. It allows you to access any attribute of an element, whether it is a standard attribute defined by HTML or a custom attribute.  When called, `getAttribute()` returns the value of the specified attribute as a string. If the attribute doesn't exist on the element, it returns `null`.
+The `getAttribute()` method is invoked on an HTML element (`element`) and takes a single parameter (`attributeName`) that specifies the name of the attribute you want to retrieve. It allows you to access any attribute of an element, whether it is a standard attribute defined by HTML or a custom attribute. When called, `getAttribute()` returns the value of the specified attribute as a string. If the attribute doesn't exist on the element, it returns `null`.
 
 The syntax for `getAttribute()` is as follows:
 
@@ -561,7 +572,7 @@ var element = document.getElementById('myElement');
 var attributeValue = element.getAttribute('data-custom');
 console.log(attributeValue);  // Output: example
 ```
- 
+
 The `getAttribute()` method is useful when you need to access specific attribute values on HTML elements dynamically. It allows you to retrieve both standard and custom attribute values and is commonly used for tasks such as data retrieval, configuration, or dynamic element manipulation in JavaScript.
 
 ---
@@ -598,3 +609,150 @@ You can use these attribute-related methods in combination with DOM selectors (`
 Note
 
 Attributes and properties are not the same. Attributes are defined in HTML markup, while properties represent the current state of an element in the DOM. Using these attribute-related methods affects the attribute values but may not always reflect changes in the corresponding properties. To update properties, you can directly modify them using dot notation or by using property-specific methods.
+
+---
+
+Practical Implementation Step 3:
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Attribute Manipulation Example</title>
+</head>
+<body>
+  <div id="myElement">Hello, World!</div>
+
+  <script>
+    // setAttribute()
+    var element = document.getElementById("myElement");
+    element.setAttribute("class", "newClass");
+
+    // getAttribute()
+    var className = element.getAttribute("class");
+    console.log(className); // "newClass"
+
+    // removeAttribute()
+    element.removeAttribute("class");
+
+    // Check if attribute is removed
+    className = element.getAttribute("class");
+    console.log(className); // null
+  </script>
+</body>
+</html>
+```
+
+The `setAttribute()` method sets the `class` attribute of the element with the ID `"myElement"` to `"newClass"`.
+
+The `getAttribute()` method retrieves the value of the `class` attribute from the element with the ID "myElement" and assigns it to the `className` variable. In this case, it will be `"newClass"`.
+
+The `removeAttribute()` method removes the `class` attribute from the element with the ID "myElement".
+
+After executing the code, you can check the value of the className variable to confirm that the attribute has been removed (it will be null in this case).
+
+---
+
+Working with Classes
+
+Working with classes in the DOM (Document Object Model) involves manipulating and interacting with the CSS classes of HTML elements. This can include adding, removing, or toggling classes, as well as checking if an element has a specific class. Here are some common methods and techniques for working with classes in the DOM:
+
+classList: The `classList` property of an element provides methods to add, remove, toggle, and check classes.
+
+`add()`: Adds one or more classes to an element.
+
+```
+var element = document.getElementById("myElement");
+element.classList.add("newClass");
+```
+
+`remove()`: Removes one or more classes from an element.
+
+```
+element.classList.remove("oldClass");
+```
+
+`toggle()`: Toggles a class on or off based on its presence.
+
+```
+element.classList.toggle("active");
+```
+
+`contains()`: Checks if an element has a specific class.
+
+```
+if (element.classList.contains("myClass")) {
+    // Do something
+}
+```
+
+className: The `className` property of an element allows you to get or set the value of the element's `class` attribute. However, using `className` directly replaces the entire class attribute, so it's less flexible than `classList`.
+
+Get the class name:
+
+```
+var element = document.getElementById("myElement");
+var className = element.className;
+```
+
+Set the class name:
+
+```
+element.className = "newClass";
+```
+
+---
+
+Practical Implementation Step 4:
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Working with Classes in the DOM</title>
+  <style>
+    .myClass {
+      color: red;
+    }
+    .newClass {
+      font-weight: bold;
+    }
+    .active {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <div id="myElement" class="myClass">Hello, World!</div>
+
+  <script>
+    // Using classList
+    var element = document.getElementById("myElement");
+    element.classList.add("newClass");
+    element.classList.remove("myClass");
+    element.classList.toggle("active");
+
+    if (element.classList.contains("newClass")) {
+      console.log("Element has class 'newClass'");
+    }
+
+    // Using className
+    var className = element.className;
+    console.log("Class name:", className);
+
+    element.className = "anotherClass";
+    console.log("Updated class name:", element.className);
+
+    // Using setAttribute
+    element.setAttribute("class", "finalClass");
+
+    console.log("Class attribute:", element.getAttribute("class"));
+
+    element.setAttribute("class", element.getAttribute("class") + " extraClass");
+    console.log("Updated class attribute:", element.getAttribute("class"));
+  </script>
+</body>
+</html>
+```
+
+---
