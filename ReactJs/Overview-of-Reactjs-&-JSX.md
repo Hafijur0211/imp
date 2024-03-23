@@ -439,3 +439,73 @@ Remember to adjust the import paths based on your file structure and naming conv
 Note: The examples provided assume you're using a modern JavaScript module system (ES modules) with a bundler like Webpack or Parcel. If you're working with an older version of JavaScript or a different module system (such as CommonJS), the import syntax might differ slightly.
 
 ---
+
+Export in React
+
+In JSX and React, the `export` keyword is used to make components, functions, or variables available for use in other files. Here's how you can use `export` in JSX and React:
+
+1 Exporting Components:
+
+In JSX and React, you can export a component to make it available for use in other files. For example, let's say you have a component named `MyComponent`:
+
+```
+import React from 'react';
+
+// Define your component
+function MyComponent() {
+return <h1>Hello, World!</h1>;
+}
+
+//Export the component
+export default Mycomponent;
+```
+
+By using `export default`, you make the `MyComponent` component accessible in other files. It can then be imported and used like this:
+
+```
+import React from 'react';
+import MyComponent from './MyComponent';
+
+function App() {
+	return (
+		<div>
+			<h1>My App</h1>
+			<MyComponent />
+		</div>
+	);
+}
+
+export default App;
+```
+
+2. Exporting Functions and Variables:
+
+You can also export functions and variables in JSX and React. Here's an example:
+
+```
+// Exporting a function
+export function myFunction() {
+	// Function logic here
+}
+
+//Exporting a variable
+export const myVariable = 'Hello, World!';
+```
+
+In another file, you can import and use the exported function or variable like this:
+
+```
+import { myFunction, myVariable } from './myModule';
+
+// Use the exported function
+myFunction();
+
+// Access the exported variable
+console.log(myVariable);
+```
+
+Remember that when exporting a component using `export default`, you can import it using any name you prefer during the import statement. For example, you can import `MyComponent` as `import MyCustomName from './MyComponent';`.
+
+These are the basics of using the `export` keyword in JSX and React. By exporting components, functions, or variables, you can create modular and reusable code in your React applications.
+
+---
