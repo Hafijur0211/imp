@@ -97,3 +97,23 @@ SPAs can provide a native-like application experience by utilizing client-side r
 SPAs can benefit from component-based architectures, modular development, and frameworks like React, Angular, or Vue.js, which provide tools for efficient development, testing, and maintenance.
 
 It's important to note that SPAs have some considerations as well. Since the entire application is loaded initially, initial load time can be slower, and search engine optimization (SEO) might require additional efforts due to the lack of traditional server-rendered HTML. However, techniques like server-side rendering (SSR) and pre-rendering can be used to address these concerns.
+
+---
+
+Multiple Page Application 
+
+A Multiple Page Application (MPA) is a type of web application architecture where each page is a separate HTML document. In an MPA, each page typically represents a distinct view or functionality of the application. When navigating between pages, the browser loads a new HTML document from the server, resulting in a full page refresh.
+
+Here are some key characteristics of Multiple Page Applications:
+
+1. Separate HTML Documents: Each page in an MPA is a standalone HTML document. It contains its own markup, stylesheets, scripts, and assets. When a user interacts with the application and navigates to a different page, the browser requests and loads a new HTML document from the server.
+
+2. Full Page Reload: When transitioning between pages in an MPA, the entire page is reloaded. This means that the browser discards the current page's state, scripts, and rendered content and starts fresh with the new HTML document. This can result in a noticeable delay during page transitions, especially if the page requires substantial data fetching or processing.
+
+3. Server-Side Rendering: In an MPA, server-side rendering (SSR) is often used to generate the initial HTML for each page on the server. This allows search engines to crawl the application and improves the initial loading performance, as the server can pre-render the page's content before sending it to the client.
+
+4. Limited Interactivity: Compared to Single Page Applications (SPAs), MPAs typically offer limited interactivity and real-time updates. Each page is responsible for its own functionality, and communication between pages often relies on traditional request-response mechanisms, such as form submissions or page reloads.
+
+5. Clear Separation of Concerns: MPAs follow a more traditional approach to web development, where each page focuses on a specific functionality or content presentation. This can lead to a clearer separation of concerns, making it easier to manage and maintain individual pages independently.
+
+It's important to note that MPAs have been widely used for a long time and continue to be relevant in various scenarios, especially for content-heavy websites, blogs, or applications where SEO and initial load performance are crucial. However, they may not provide the same level of interactivity and seamless user experience as Single Page Applications (SPAs), which dynamically update content within the same page without full-page refreshes.
