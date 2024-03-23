@@ -294,3 +294,97 @@ React internally transforms JSX expressions into regular JavaScript function cal
 JSX simplifies the process of creating and composing components in React.js, making the code more readable and maintainable. It combines the power of JavaScript and the familiarity of HTML-like syntax, making it an essential part of the React.js development workflow.
 
 ---
+
+Rules for writing JSX
+
+When writing JSX in React, there are several rules and conventions to follow. Here are some important guidelines to keep in mind:
+
+- Import React:
+
+Every file that contains JSX code needs to import the `React` library at the top. This is necessary because JSX is translated into `React.createElement()` calls.
+
+```
+import React from 'react';
+```
+
+- Capitalize Component Names:
+
+When defining a custom component in JSX, the component name should always be capitalized. This is to differentiate it from HTML tags and to conform to the naming convention for components.
+
+```
+import React from 'react';
+
+function MyComponent() {
+  return <div>This is a custom component</div>;
+}
+```
+
+- Use Self-Closing Tags:
+
+For components that don't have any children, use self-closing tags to close them. This applies to both built-in and custom components.
+
+```
+import React from 'react';
+
+function MyComponent() {
+  return (
+    <div>
+      <CustomComponent />
+      <img src="example.jpg" alt="Example" />
+    </div>
+  );
+}
+```
+
+- Use Curly Braces for Expressions:
+
+To embed JavaScript expressions within JSX, use curly braces `{}`. This allows you to generate content based on variables or perform computations dynamically.
+
+```
+import React from 'react';
+
+function MyComponent() {
+  const name = 'John Doe';
+  const age = 25;
+
+  return (
+    <div>
+      <p>Name: {name}</p>
+      <p>Age: {age}</p>
+    </div>
+  );
+}
+```
+
+- One Root Element:
+
+JSX requires a single root element to encapsulate all the JSX code within a component's `render` method. If you have multiple elements, wrap them in a single parent element.
+
+```
+import React from 'react';
+
+function MyComponent() {
+  return (
+    <div>
+      <h1>Hello, World!</h1>
+      <p>This is my component.</p>
+    </div>
+  );
+}
+```
+
+- Use className for CSS:
+
+Instead of using the `class` attribute for applying CSS classes to elements, use `className`. This is because `class` is a reserved keyword in JavaScript.
+
+```
+import React from 'react';
+
+function MyComponent() {
+  return <div className="my-component">Styled with CSS</div>;
+}
+```
+
+These are some of the key rules for writing JSX in React. Adhering to these conventions will help you write clean and readable code while working with React components.
+
+---
