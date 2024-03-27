@@ -676,3 +676,26 @@ Lastly, the event handler performs a custom action, which in this case is displa
 
 By using this approach, the event handling code in the example ensures compatibility with a wide range of browsers, including both modern and older versions. It provides a consistent behavior across different browsers and ensures that the button click event is handled correctly in all scenarios.
 
+---
+
+Summary
+
+What did we learn?
+
+- Element nodes represent HTML or XML elements in the document, such as `<div>`, `<p>`, or `<a>`.
+
+- Text nodes contain textual content within an element, such as plain text or whitespace.
+
+- DocumentFragment nodes are lightweight containers that can hold a collection of nodes. They are useful for performing operations on a group of nodes before appending them to the DOM, reducing the number of reflows or repaints.
+
+- We learn how to handle user interactions and respond to events such as clicks, keyboard input, form submissions, mouse movements, and more.
+
+- We learn about the different types of events available in the DOM and their associated properties.
+
+- We learn various techniques for attaching event handlers to DOM elements. These techniques include using `addEventListener`, assigning functions directly to `on<event>` properties, and utilizing event delegation.
+
+- We learn about event propagation and the capturing and bubbling phases. This knowledge helps us understand the order in which events are triggered when multiple elements are nested.
+
+- We learn about the importance of cross-browser compatibility and the potential variations in event handling among different browsers.
+
+---
